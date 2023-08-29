@@ -29,8 +29,8 @@ function NavBar() {
   return (
     <nav className="bg-yellow-300 shadow top-0 w-full z-10
                     border-t border-yellow-400" aria-label="Top">
-      <div className="mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
+      <div className="mx-auto px-8 sm:px-2 lg:px-8">
+        <div className="flex justify-between h-12">
           <div className="flex items-center ml-20">
             {/* <NavLink to="/" className="text-xl font-bold text-gray-800">
               <img
@@ -81,7 +81,7 @@ function NavBar() {
                     exact
                     to={item.href}
                     className="px-3 py-2 text-sm font-medium text-gray-800 h-full
-                    flex justify-center items-center border border-yellow-400
+                    flex justify-center items-center border-x border-yellow-400
                     hover:text-gray-900 hover:bg-yellow-400 focus:outline-none focus:text-gray-900
                     focus:bg-yellow-400 transition duration-150 ease-in-out"
                     activeClassName="bg-yellow-400"
@@ -105,10 +105,10 @@ function NavBar() {
                   key={item.name}
                   exact
                   to={item.href}
-                  className="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:text-gray-700
-                  hover:bg-yellow-400 focus:outline-none focus:text-gray-700 focus:bg-yellow-400
+                  className="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:text-gray-900
+                  hover:bg-yellow-400 focus:outline-none focus:text-gray-900 focus:bg-yellow-400
                   transition duration-150 ease-in-out"
-                  activeClassName="bg-gray-100"
+                  activeClassName="bg-yellow-400"
                   onClick={toggleMenu}
                 >
                   {item.name}
