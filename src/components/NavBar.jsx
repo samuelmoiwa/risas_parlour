@@ -7,9 +7,11 @@ import AOS from '../components/aosConfig';
 
 const navigation = [
   { name: "HOME", href: "/?section=home", current: true },
-  { name: "FEATURES", href: "/?section=features", current: false },
-  { name: "PRICING", href: "/?section=pricing", current: false },
+  { name: "ABOUT US", href: "/?section=features", current: false },
+  { name: "PRODUCTS", href: "/?section=pricing", current: false },
   { name: "CONTACT US", href: "/?section=contact", current: false },
+  { name: "TESTIMONIALS", href: "/?section=contact", current: false },
+  { name: "FAQ", href: "/?section=contact", current: false },
 ];
 
 function NavBar() {
