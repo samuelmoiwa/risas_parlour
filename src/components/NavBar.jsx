@@ -27,7 +27,8 @@ function NavBar() {
   }, [location]);
 
   return (
-    <nav className="bg-yellow-300 shadow top-0 w-full fixed z-10" aria-label="Top">
+    <nav className="bg-yellow-300 shadow top-0 w-full z-10
+                    border-t border-yellow-400" aria-label="Top">
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center ml-20">
