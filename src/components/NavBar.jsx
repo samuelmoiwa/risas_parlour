@@ -79,10 +79,11 @@ function NavBar() {
                     key={item.name}
                     exact
                     to={item.href}
-                    className="px-3 py-2 text-sm font-medium text-gray-800
-                    hover:text-gray-700 hover:bg-yellow-400 focus:outline-none focus:text-gray-700
+                    className="px-3 py-2 text-sm font-medium text-gray-800 h-full
+                    flex justify-center items-center
+                    hover:text-gray-900 hover:bg-yellow-400 focus:outline-none focus:text-gray-900
                     focus:bg-yellow-400 transition duration-150 ease-in-out"
-                    activeClassName="bg-gray-100"
+                    activeClassName="bg-yellow-400"
                     onClick={toggleMenu}
                   >
                     {item.name}
