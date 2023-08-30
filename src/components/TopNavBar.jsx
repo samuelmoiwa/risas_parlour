@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { NavLink } from 'react-router-dom'
 import SearchBar from './SearchBar'
 import location_icon from '../assets/location_icon.svg'
@@ -8,6 +8,28 @@ import logo from '../assets/logo_no_background.png'
 import heart_icon from '../assets/heart_icon.svg'
 
 const TopNavBar = () => {
+
+  const [hintsVisibility, setHintsVisibility] = useState({
+    favorites: false,
+    user: false,
+    shoppingBag: false,
+  });
+
+  const handleMouseEnter = (iconKey) => {
+    setHintsVisibility((prevState) => ({
+      ...prevState,
+      [iconKey]: true,
+    }));
+  };
+
+  const handleMouseLeave = (iconKey) => {
+    setHintsVisibility((prevState) => ({
+      ...prevState,
+      [iconKey]: false,
+    }));
+  };
+
+
   return (
     <div className='pb-6 bg-yellow-300 flex  flex-col items-center w-full'>
 
@@ -57,32 +79,83 @@ const TopNavBar = () => {
             <SearchBar />
           </div>
 
-          <div className=' flex flex-row gap-8 sm:mt-0 mt-4'>
-            <NavLink className='flex flex-row text-gray-800'>
-              <img
-                  className="block sm:h-8 sm:w-8 h-6 w-6"
+
+
+
+
+
+
+          <div className='flex flex-row gap-8 sm:mt-0 mt-4'>
+            <div className='relative'>
+              <NavLink
+                className='flex flex-row text-gray-800'
+                onMouseEnter={() => handleMouseEnter('favorites')}
+                onMouseLeave={() => handleMouseLeave('favorites')}
+              >
+                <img
+                  className='block sm:h-8 sm:w-8 h-6 w-6'
                   src={heart_icon}
-                  alt="Your Company"
-              />
-            </NavLink>
+                  alt='Favorites'
+                />
+              </NavLink>
+              {hintsVisibility.favorites && (
+                <div className='absolute -left-5 transform translate-y-1 bg-gray-800
+                text-white py-1 px-2 w-20 rounded opacity-90 transition-opacity duration-300'
+                >
+                  Favorites
+                </div>
+              )}
+            </div>
 
-            <NavLink className='flex flex-row text-gray-800'>
-              <img
-                  className="block sm:h-8 sm:w-8 h-6 w-6"
+            <div className='relative'>
+              <NavLink
+                className='flex flex-row text-gray-800'
+                onMouseEnter={() => handleMouseEnter('user')}
+                onMouseLeave={() => handleMouseLeave('user')}
+              >
+                <img
+                  className='block sm:h-8 sm:w-8 h-6 w-6'
                   src={user_icon}
-                  alt="Your Company"
-              />
-            </NavLink>
+                  alt='User'
+                />
+              </NavLink>
+              {hintsVisibility.user && (
+                <div className='absolute -left-5 transform translate-y-1 bg-gray-800
+                text-white py-1 px-3 w-20 rounded opacity-90 transition-opacity duration-300'
+                >
+                  Profile
+                </div>
+              )}
+            </div>
 
-            <NavLink className='flex flex-row sm:w-36 text-gray-800 items-center'>
-              <img
-                  className="block sm:h-6 sm:w-6 h-6 w-6"
+            <div className='relative'>
+              <NavLink
+                className='flex flex-row text-gray-800'
+                onMouseEnter={() => handleMouseEnter('shoppingBag')}
+                onMouseLeave={() => handleMouseLeave('shoppingBag')}
+              >
+                <img
+                  className='block sm:h-8 sm:w-8 h-6 w-6'
                   src={shopping_bag}
-                  alt="Your Company"
-              />
-              <p className='text-gray-800 font-bold text-sm'>SLE 0.00</p>
-            </NavLink>
+                  alt='Shopping Bag'
+                />
+              </NavLink>
+              {hintsVisibility.shoppingBag && (
+                <div className='absolute -left-5 transform translate-y-1  bg-gray-800
+                text-white py-1 px-2 w-20 rounded opacity-90 transition-opacity duration-300'
+                >
+                  Cart
+                </div>
+              )}
+            </div>
           </div>
+
+
+
+
+
+
+
 
         </div>
 
