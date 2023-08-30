@@ -19,7 +19,12 @@ module.exports = {
       },
       width: {
         '128': '50rem',
+      },
+
+      height: {
+        '100': '40rem',
       }
+
     },
   },
   variants: {
