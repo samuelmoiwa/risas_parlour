@@ -79,12 +79,6 @@ const TopNavBar = () => {
             <SearchBar />
           </div>
 
-
-
-
-
-
-
           <div className='flex flex-row gap-8 sm:mt-0 mt-4'>
             <div className='relative'>
               <NavLink
@@ -149,14 +143,6 @@ const TopNavBar = () => {
               )}
             </div>
           </div>
-
-
-
-
-
-
-
-
         </div>
 
     </div>
