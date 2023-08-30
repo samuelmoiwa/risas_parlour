@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Carousel, IconButton } from "@material-tailwind/react";
 
 export function HeroBannerCarousel() {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState("");
 
   const slides = [
     { color: "bg-red-600" },
@@ -15,16 +15,15 @@ export function HeroBannerCarousel() {
   ];
 
   const autoChangeSlide = () => {
+    console.log("Changing slide");
     setActiveIndex((prevIndex) => (prevIndex + 1) % slides.length);
   };
+
 
   useEffect(() => {
     const interval = setInterval(autoChangeSlide, 5000);
     return () => clearInterval(interval);
   }, []);
-
-
-
 
   return (
     <Carousel
