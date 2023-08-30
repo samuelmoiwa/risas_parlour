@@ -34,30 +34,30 @@ const TopNavBar = () => {
     <div className='pb-6 bg-yellow-300 flex  flex-col items-center w-full'>
 
         <div className='sm:w-10/12 w-full flex sm:flex-row flex-col sm:justify-between mt-4 px-2 sm:p-0'>
-            <div className='flex flex-start text-gray-800 sm:mb-0 mb-4 '>
+            <div className='flex flex-start text-gray-800 sm:mb-0 mb-4 text-xs'>
                 welcome to Risa's Palour
             </div>
 
-            <div className='flex flex-row gap-3'>
-                <NavLink className='flex flex-row text-gray-800'>
+            <div className='flex flex-row items-center justify-center gap-3'>
+                <NavLink className='flex flex-row text-gray-800 text-xs'>
                     <img
-                        className="block h-6 w-6"
+                        className="block h-4 w-4"
                         src={location_icon}
                         alt="Your Company"
                     />
                     <p>Store Locator</p>
                 </NavLink>
-                <NavLink className='flex flex-row text-gray-800 border-x border-gray-500 px-3'>
+                <NavLink className='flex flex-row text-gray-800 border-x border-gray-500 text-xs px-3'>
                     <img
-                        className="block h-6 w-6"
+                        className="block h-4 w-4"
                         src={shopping_bag}
                         alt="Your Company"
                     />
                     <p>Shop</p>
                 </NavLink>
-                <NavLink className='flex flex-row text-gray-800'>
+                <NavLink className='flex flex-row text-gray-800 text-xs'>
                     <img
-                        className="block h-6 w-6"
+                        className="block h-4 w-4"
                         src={user_icon}
                         alt="Your Company"
                     />
