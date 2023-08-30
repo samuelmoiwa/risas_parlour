@@ -129,7 +129,7 @@ const TopNavBar = () => {
                 onMouseLeave={() => handleMouseLeave('shoppingBag')}
               >
                 <img
-                  className='block sm:h-8 sm:w-8 h-6 w-6'
+                  className='block sm:h-8 sm:w-8 h-5 w-5'
                   src={shopping_bag}
                   alt='Shopping Bag'
                 />
