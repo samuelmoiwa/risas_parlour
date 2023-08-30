@@ -32,18 +32,6 @@ function NavBar() {
       <div className="mx-auto px-8 sm:px-2 lg:px-8">
         <div className="flex justify-between h-12">
           <div className="flex items-center ml-20">
-            {/* <NavLink to="/" className="text-xl font-bold text-gray-800">
-              <img
-                className="block h-8 w-auto lg:hidden"
-                src={logo}
-                alt="Your Company"
-              />
-              <img
-                className="hidden h-8 w-auto lg:block"
-                src={logo}
-                alt="Your Company"
-              />
-            </NavLink> */}
           </div>
 
           <div className="flex items-center -mr-2 sm:hidden">
