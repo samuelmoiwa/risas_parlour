@@ -75,7 +75,7 @@ const TopNavBar = () => {
               />
           </NavLink>
 
-          <div className='flex flex-row items-center justify-center w-full pr-16'>
+          <div className='flex flex-row items-center justify-center w-full sm:pr-0 pr-20'>
             <SearchBar />
           </div>
 
