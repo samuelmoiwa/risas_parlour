@@ -122,9 +122,9 @@ const TopNavBar = () => {
               )}
             </div>
 
-            <div className='relative'>
+            <div className='relative sm:w-44'>
               <NavLink
-                className='flex flex-row text-gray-800'
+                className='flex flex-row text-gray-800 font-bold text-sm items-center'
                 onMouseEnter={() => handleMouseEnter('shoppingBag')}
                 onMouseLeave={() => handleMouseLeave('shoppingBag')}
               >
@@ -133,6 +133,7 @@ const TopNavBar = () => {
                   src={shopping_bag}
                   alt='Shopping Bag'
                 />
+                <p>SLE 0.00</p>
               </NavLink>
               {hintsVisibility.shoppingBag && (
                 <div className='absolute -left-5 transform translate-y-1  bg-gray-800
