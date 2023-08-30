@@ -74,12 +74,13 @@ const TopNavBar = () => {
               />
             </NavLink>
 
-            <NavLink className='flex flex-row text-gray-800'>
+            <NavLink className='flex flex-row sm:w-36 text-gray-800 items-center'>
               <img
-                  className="block sm:h-8 sm:w-8 h-6 w-6"
+                  className="block sm:h-6 sm:w-6 h-6 w-6"
                   src={shopping_bag}
                   alt="Your Company"
               />
+              <p className='text-gray-800 font-bold text-sm'>SLE 0.00</p>
             </NavLink>
           </div>
 
