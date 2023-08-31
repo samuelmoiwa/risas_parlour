@@ -58,7 +58,7 @@ export function HeroBannerCarousel() {
               color="white"
               className="text-gray-600"
             >
-              <span className="font-bold text-4xl text-gray-700">Apple Watch</span> <br/>
+              <span className="font-bold text-6xl text-gray-700">Apple Watch</span> <br/>
               Apple Watch Series 3 Apple Watch Series 2 MacBook Pro, apple watch series 3,
               gadget, electronics, mobile Phone png
             </Typography>
