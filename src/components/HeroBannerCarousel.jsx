@@ -19,7 +19,6 @@ function HeroBannerCarousel() {
 
         </div>
 
-
     </Carousel>
   )
 }
