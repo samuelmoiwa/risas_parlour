@@ -150,5 +150,4 @@ const TopNavBar = () => {
   )
 }
 
-
 export default TopNavBar
